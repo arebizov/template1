@@ -4,16 +4,21 @@ spring:
     hikari:
       connection-timeout: 30000
       maximum-pool-size: 10
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${DATABASE_HOST:localhost}/${DATABASE_NAME:template}?currentSchema=public
-    username: ${DATABASE_USER:postgres}
-    password: ${DATABASE_PASSWORD:docker}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+    #url: jdbc:postgresql://${DATABASE_HOST:localhost}/${DATABASE_NAME:template}?currentSchema=public
+    url: jdbc:sqlserver://localhost:2222;databasename=java;integratedSecurity=true
+    username: sa
+    password: Ybrbnjc777
+    #username: ${DATABASE_USER:postgres}
+    #password: ${DATABASE_PASSWORD:docker}
   jpa:
     hibernate:
       ddl-auto: none
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        #dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
         jdbc:
           time_zone: UTC
           batch_size: 5
