@@ -7,7 +7,8 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
     #url: jdbc:postgresql://${DATABASE_HOST:localhost}/${DATABASE_NAME:template}?currentSchema=public
-    url: jdbc:sqlserver://localhost:2222;databasename=java;integratedSecurity=false
+    #url: jdbc:sqlserver://localhost:2222;databasename=java;integratedSecurity=false
+    url: jdbc:sqlserver://localhost:1433;databasename=sova;integratedSecurity=false
     username: sa
     password: Ybrbnjc777
     #username: ${DATABASE_USER:postgres}

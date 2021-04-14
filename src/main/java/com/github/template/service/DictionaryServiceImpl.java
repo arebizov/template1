@@ -14,8 +14,8 @@ public class DictionaryServiceImpl implements DictionaryService {
     private final DictionaryRepository dictionaryRepository;
 
     @Override
-    public Page<MaterialGroup> getAll() {
-        return dictionaryRepository.findAll(PageRequest.of(0,5));
+    public Page<MaterialGroup> getAll(Integer page, Integer itemsPerPage) {
+        return dictionaryRepository.findAll(PageRequest.of(page, itemsPerPage));
 
     }
 }

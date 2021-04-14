@@ -5,6 +5,6 @@ import org.springframework.data.domain.Page;
 
 public interface DictionaryService {
 
-    Page<MaterialGroup> getAll();
+    Page<MaterialGroup> getAll(Integer page, Integer itemsPerPage);
 
 }

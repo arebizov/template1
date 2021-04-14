@@ -22,6 +22,6 @@ public class MaterialGroup implements Serializable {
     private String name;
 
     @Column(name = "MATNAME_ALT")
-    private String description;
+    private String group;
 
 }

@@ -24,8 +24,8 @@ public class DictionaryController {
     public ResponseEntity<Page<MaterialGroup>> getAllDictionaries(
             @RequestParam(required = false, defaultValue = "0") Integer page,
             @RequestParam(required = false, defaultValue = "50") Integer itemsPerPage
-    ){
-        return ResponseEntity.ok(dictionaryService.getAll());
+    )
+    {
+        return ResponseEntity.ok(dictionaryService.getAll(page,itemsPerPage));
     }
-
 }
