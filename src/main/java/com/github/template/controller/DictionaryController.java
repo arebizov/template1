@@ -21,11 +21,6 @@ public class DictionaryController {
     private final DictionaryService dictionaryService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-
-    public ResponseEntity<Page<MaterialGroup>> getAllDictionaries() {
-        return ResponseEntity.ok(dictionaryService.getAll());
-    }
-
     public ResponseEntity<Page<MaterialGroup>> getAllDictionaries(
             @RequestParam(required = false, defaultValue = "0") Integer page,
             @RequestParam(required = false, defaultValue = "50") Integer itemsPerPage
