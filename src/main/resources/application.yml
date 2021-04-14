@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
     #url: jdbc:postgresql://${DATABASE_HOST:localhost}/${DATABASE_NAME:template}?currentSchema=public
-    url: jdbc:sqlserver://localhost:2222;databasename=java;integratedSecurity=true
+    url: jdbc:sqlserver://localhost:2222;databasename=java;integratedSecurity=false
     username: sa
     password: Ybrbnjc777
     #username: ${DATABASE_USER:postgres}
@@ -17,7 +17,6 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        #dialect: org.hibernate.dialect.PostgreSQL9Dialect
         dialect: org.hibernate.dialect.SQLServer2012Dialect
         jdbc:
           time_zone: UTC
@@ -26,8 +25,8 @@ spring:
         order_inserts: true
 
   liquibase:
-    enabled: true
+    enabled: false
     change-log: classpath:/db/changelog/master.xml
-
-  main:
-    allow-bean-definition-overriding: true
+#
+#  main:
+#    allow-bean-definition-overriding: true

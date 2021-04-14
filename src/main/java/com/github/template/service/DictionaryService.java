@@ -1,11 +1,10 @@
 package com.github.template.service;
 
-import com.github.template.model.db.Dictionary;
-
-import java.util.List;
+import com.github.template.model.db.MaterialGroup;
+import org.springframework.data.domain.Page;
 
 public interface DictionaryService {
 
-    List<Dictionary> getAll();
+    Page<MaterialGroup> getAll();
 
 }
