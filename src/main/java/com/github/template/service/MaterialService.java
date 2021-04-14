@@ -3,7 +3,7 @@ package com.github.template.service;
 import com.github.template.model.db.MaterialGroup;
 import org.springframework.data.domain.Page;
 
-public interface DictionaryService {
+public interface MaterialService {
 
     Page<MaterialGroup> getAll(Integer page, Integer itemsPerPage);
 
