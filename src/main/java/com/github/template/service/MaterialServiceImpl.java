@@ -34,8 +34,8 @@ public class MaterialServiceImpl implements MaterialService {
     @Override
     public MaterialGroupDto editMaterial(MaterialGroupDto material) {
         MaterialGroup materialGroup= materialRepository.getOne( material.getId() );
-        materialGroup.setGroup( materialGroup.getGroup() );
-        materialGroup.setName( materialGroup.getName() );
+        materialGroup.setGroup( material.getGroup() );
+        materialGroup.setName( material.getName() );
         materialRepository.save(materialGroup);
         return material;
     }

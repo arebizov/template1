@@ -31,9 +31,9 @@ public class MaterialController {
    @PutMapping
    public ResponseEntity<MaterialGroupDto> updateMaterial (@RequestBody MaterialGroupDto material) {
         return ResponseEntity.ok(materialService.editMaterial( material ));
-   }
+    }
 //    @DeleteMapping
-//    public ResponseEntity<MaterialGroup> deleteMaterial (@RequestBody MaterialGroupDto material){
-//        return ResponseEntity.ok(materialService.delete());
-//    }
+//   public ResponseEntity<MaterialGroup> deleteMaterial (@RequestBody MaterialGroupDto material){
+//       return ResponseEntity.ok(materialService.delete());
+//   }
 }
