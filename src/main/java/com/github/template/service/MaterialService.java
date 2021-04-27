@@ -9,6 +9,6 @@ public interface MaterialService {
     Page<MaterialGroup> getAll(Integer page, Integer itemsPerPage);
     MaterialGroupDto addNewMaterial(MaterialGroupDto material);
     MaterialGroupDto editMaterial(MaterialGroupDto material);
-    int delete(Long id);
+    int delete(MaterialGroupDto id);
 
 }

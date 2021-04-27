@@ -41,7 +41,7 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(MaterialGroupDto id) {
         return 0;
     }
 }
